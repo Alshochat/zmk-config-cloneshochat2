@@ -1,0 +1,118 @@
+/ {
+    kscan0: kscan {
+        compatible = "gpio-keys";
+        label = "KSCAN";
+        #address-cells = <1>;
+        #size-cells = <0>;
+        debounce-press-ms = <5>;
+        debounce-release-ms = <5>;
+
+        button0: button_0 {
+            label = "KEY_0";
+            gpios = <&gpio0 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <0>;
+        };
+
+        button1: button_1 {
+            label = "KEY_1";
+            gpios = <&gpio0 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <1>;
+        };
+
+        button2: button_2 {
+            label = "KEY_2";
+            gpios = <&gpio0 17 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <2>;
+        };
+
+        button3: button_3 {
+            label = "KEY_3";
+            gpios = <&gpio0 20 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <3>;
+        };
+
+        button4: button_4 {
+            label = "KEY_4";
+            gpios = <&gpio0 22 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <4>;
+        };
+
+        button5: button_5 {
+            label = "KEY_5";
+            gpios = <&gpio0 24 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <5>;
+        };
+
+        button6: button_6 {
+            label = "KEY_6";
+            gpios = <&gpio1 0 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <6>;
+        };
+
+        button7: button_7 {
+            label = "KEY_7";
+            gpios = <&gpio0 11 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <7>;
+        };
+
+        button8: button_8 {
+            label = "KEY_8";
+            gpios = <&gpio1 4 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <8>;
+        };
+
+        button9: button_9 {
+            label = "KEY_9";
+            gpios = <&gpio1 15 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <9>;
+        };
+
+        button10: button_10 {
+            label = "KEY_10";
+            gpios = <&gpio1 11 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <10>;
+        };
+
+        button11: button_11 {
+            label = "KEY_11";
+            gpios = <&gpio0 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+            linux,code = <11>;
+        };
+    };
+};
+
+&pwm0 {
+    status = "okay";
+    pinctrl-0 = <&pwm0_default>;
+    pinctrl-names = "default";
+
+    led0: led_0 {
+        label = "LED_GREEN";
+        pwms = <&pwm0 0 1000000 PWM_POLARITY_NORMAL>;
+        color = <LED_COLOR_ID_GREEN>;
+    };
+
+    led1: led_1 {
+        label = "LED_RED";
+        pwms = <&pwm0 1 1000000 PWM_POLARITY_NORMAL>;
+        color = <LED_COLOR_ID_RED>;
+    };
+
+    led2: led_2 {
+        label = "LED_YELLOW";
+        pwms = <&pwm0 2 1000000 PWM_POLARITY_NORMAL>;
+        color = <LED_COLOR_ID_YELLOW>;
+    };
+
+    led3: led_3 {
+        label = "LED_BLUE";
+        pwms = <&pwm1 0 1000000 PWM_POLARITY_NORMAL>;
+        color = <LED_COLOR_ID_BLUE>;
+    };
+
+    led4: led_4 {
+        label = "LED_ORANGE";
+        pwms = <&pwm1 1 1000000 PWM_POLARITY_NORMAL>;
+        color = <LED_COLOR_ID_ORANGE>;
+    };
+};
