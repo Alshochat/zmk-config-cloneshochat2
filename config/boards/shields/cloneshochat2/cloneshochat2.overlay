@@ -1,23 +1,26 @@
-/{
+/ {
     chosen {
-       zmk,kscan = $default_kscan; 
-    }
+        zmk,kscan = &kscan0;
+    };
 
-    default_kscan: kscan {
+    kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
-        label = "default_kscan";
+        label = "kscan_direct";
 
         input-gpios = 
-            <&pro_micro 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-            <&pro_micro 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+            <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,   // STAR
+            <&gpio0 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,   // MENU
+            <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // DOWN
+            <&gpio0 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // UP
+            <&gpio0 22 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // GREEN
+            <&gpio0 24 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // RED
+            <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,   // YELLOW
+            <&gpio0 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // BLUE
+            <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,   // ORANGE
+            <&gpio1 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>,  // WHAMMY
+            <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  // PLAYER_SELECTION
+
+        debounce-press-ms = <5>;
+        debounce-release-ms = <5>;
     };
 };
