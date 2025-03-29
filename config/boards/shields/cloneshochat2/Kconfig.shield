@@ -1,0 +1,2 @@
+config SHIELD_CLONESHOCHAT2
+    def_bool $(shields_list_contains, cloneshochat2)

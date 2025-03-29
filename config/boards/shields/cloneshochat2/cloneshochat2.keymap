@@ -1,0 +1,60 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+/{
+    keymap {
+        compatible = "zmk,keymap";
+
+        player_one {
+            bindings = <
+                &kp HOME   /* p0.06 (star) */
+                &kp ESC    /* p0.08 (menu) */
+                &kp PGDN   /* p0.17 (down) */
+                &kp PGUP   /* p0.20 (up) */
+                &kp F1     /* p0.22 (green) */
+                &kp F2     /* p0.24 (red) */
+                &kp F3     /* p01.00 (yellow) */
+                &kp F4     /* p0.11 (blue) */
+                &kp F5     /* p1.04 (orange) */
+                &mo 1      /* p1.11 (player) - toggle to second layer */
+                &kp END    /* p1.15 (whammy) */
+                &mo 2      /* p0.06 (bt) */
+            >;
+        };
+
+        player_two {
+            bindings = <
+                &kp MINUS  /* p0.06 (star) */
+                &kp ESC    /* p0.08 (menu) */
+                &kp DOWN   /* p0.17 (down) */
+                &kp UP     /* p0.20 (up) */
+                &kp F6     /* p0.22 (green) */
+                &kp F7     /* p0.24 (red) */
+                &kp F8     /* p01.00 (yellow) */
+                &kp F9     /* p0.11 (blue) */
+                &kp F10    /* p1.04 (orange) */
+                &mo 0      /* p1.11 (player) - toggle back to first layer */
+                &kp EQUAL  /* p1.15 (whammy) */
+                &mo 2      /* p0.06 (bt) */
+            >;
+        };
+
+        ble_layer {
+            bindings = <
+                &bootloader
+                &bt BT_CLEAR
+                &bt BT_SEL 0
+                &bt BT_SEL 1
+                &none
+                &none
+                &none
+                &none
+                &none
+                &none
+                &bt BT_SEL 2
+                &none
+            >;
+        };
+    };
+};
