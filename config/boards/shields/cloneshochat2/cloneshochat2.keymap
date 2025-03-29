@@ -14,7 +14,7 @@
                 &kp PGUP   /* p0.20 (up) */
                 &kp F1     /* p0.22 (green) */
                 &kp F2     /* p0.24 (red) */
-                &kp F3     /* p01.00 (yellow) */
+                &kp F3     /* p1.00 (yellow) */
                 &kp F4     /* p0.11 (blue) */
                 &kp F5     /* p1.04 (orange) */
                 &mo 1      /* p1.11 (player) - toggle to second layer */
@@ -31,7 +31,7 @@
                 &kp UP     /* p0.20 (up) */
                 &kp F6     /* p0.22 (green) */
                 &kp F7     /* p0.24 (red) */
-                &kp F8     /* p01.00 (yellow) */
+                &kp F8     /* p1.00 (yellow) */
                 &kp F9     /* p0.11 (blue) */
                 &kp F10    /* p1.04 (orange) */
                 &mo 0      /* p1.11 (player) - toggle back to first layer */
