@@ -43,7 +43,7 @@
         ble_layer {
             bindings = <
                 &bootloader
-                &bt BT_CLEAR
+                &bt BT_CLR
                 &bt BT_SEL 0
                 &bt BT_SEL 1
                 &none
