@@ -3,7 +3,7 @@
     "url": "",
     "maintainer": "you@example.com",
     "layouts": {
-        "LAYOUT": {
+        "player_one": {
             "layout": [
                 {
                     "label": "K00",
