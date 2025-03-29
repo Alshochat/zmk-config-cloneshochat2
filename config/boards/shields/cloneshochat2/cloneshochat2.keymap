@@ -8,35 +8,35 @@
 
         player_one {
             bindings = <
-                &kp HOME   /* p0.06 (star) */
-                &kp ESC    /* p0.08 (menu) */
-                &kp PGDN   /* p0.17 (down) */
-                &kp PGUP   /* p0.20 (up) */
-                &kp F1     /* p0.22 (green) */
-                &kp F2     /* p0.24 (red) */
-                &kp F3     /* p1.00 (yellow) */
-                &kp F4     /* p0.11 (blue) */
-                &kp F5     /* p1.04 (orange) */
-                &mo 1      /* p1.11 (player) - toggle to second layer */
-                &kp END    /* p1.15 (whammy) */
-                &mo 2      /* p0.06 (bt) */
+                &kp HOME   
+                &kp ESC    
+                &kp PGDN   
+                &kp PGUP   
+                &kp F1     
+                &kp F2     
+                &kp F3     
+                &kp F4     
+                &kp F5     
+                &mo 1      
+                &kp END    
+                &mo 2      
             >;
         };
 
         player_two {
             bindings = <
-                &kp MINUS  /* p0.06 (star) */
-                &kp ESC    /* p0.08 (menu) */
-                &kp DOWN   /* p0.17 (down) */
-                &kp UP     /* p0.20 (up) */
-                &kp F6     /* p0.22 (green) */
-                &kp F7     /* p0.24 (red) */
-                &kp F8     /* p1.00 (yellow) */
-                &kp F9     /* p0.11 (blue) */
-                &kp F10    /* p1.04 (orange) */
-                &mo 0      /* p1.11 (player) - toggle back to first layer */
-                &kp EQUAL  /* p1.15 (whammy) */
-                &mo 2      /* p0.06 (bt) */
+                &kp MINUS  
+                &kp ESC    
+                &kp DOWN   
+                &kp UP     
+                &kp F6     
+                &kp F7     
+                &kp F8     
+                &kp F9     
+                &kp F10    
+                &mo 0      
+                &kp EQUAL  
+                &mo 2      
             >;
         };
 
