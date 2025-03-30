@@ -24,3 +24,23 @@
         debounce-release-ms = <5>;
     };
 };
+
+/ {
+    leds {
+        compatible = "pwm-leds";
+        led_strip: led_strip {
+            compatible = "sk6812-strip";
+            label = "LED_STRIP";
+            chain-length = <5>;
+            color-order = "GRB";
+            spi-max-frequency = <4000000>;
+            gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>;
+        };
+    };
+
+    zmk,underglow {
+        compatible = "zmk,underglow";
+        label = "UNDGLOW";
+        strip = <&led_strip>;
+    };
+};
