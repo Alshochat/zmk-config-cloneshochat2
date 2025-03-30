@@ -26,16 +26,12 @@
 };
 
 / {
-    leds {
-        compatible = "pwm-leds";
-        led_strip: led_strip {
-            compatible = "sk6812-strip";
-            label = "LED_STRIP";
-            chain-length = <5>;
-            color-order = "GRB";
-            spi-max-frequency = <4000000>;
-            gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>;
-        };
+    led_strip: led_strip {
+        compatible = "sk6812-strip";
+        label = "LED_STRIP";
+        chain-length = <5>;
+        color-order = "GRB";
+        data-gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>;
     };
 
     zmk,underglow {
