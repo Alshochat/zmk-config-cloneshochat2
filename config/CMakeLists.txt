@@ -1,0 +1,1 @@
+target_sources(app PRIVATE src/underglow_static_colors.c)
