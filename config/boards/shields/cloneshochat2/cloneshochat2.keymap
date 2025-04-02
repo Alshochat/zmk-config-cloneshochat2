@@ -19,7 +19,8 @@
                 &kp F5     
                 &mo 1 
                 &mo 2      
-                &kp END          
+                &kp END    
+                &mo 2      
             >;
         };
 
@@ -34,9 +35,9 @@
                 &kp F8     
                 &kp F9     
                 &kp F10    
-                &mo 0        
-                &mo 2 
-                &kp EQUAL     
+                &mo 0      
+                &kp EQUAL  
+                &mo 2      
             >;
         };
 
@@ -52,8 +53,8 @@
                 &none
                 &none
                 &none
-                &none
                 &bt BT_SEL 2
+                &none
             >;
         };
     };
